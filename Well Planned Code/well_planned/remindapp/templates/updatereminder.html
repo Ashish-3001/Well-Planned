@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update</title>
+</head>
+<body>
+<div class="jumbotron">
+        <section id="update" class="py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 style="text-align: center">Welcome {{ user.first_name }}</h2>
+                        {% if rem %}
+                            <h4 style="text-align: center">Here is all your reminders</h4>
+                            {% for r in rem %}
+                                <div class="card" style="width: 18rem;">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">{{ r.title }}</li>
+                                        <li class="list-group-item">{{ r.current_date }}</li>
+                                        <li class="list-group-item">{{ r.reminder_date }}</li>
+                                    </ul>
+                                    <a href="{% url 'updatereminder' pk=r.pk %}"
+                                       class="btn btn-secondary btn-block">Update</a>
+                                </div>
+                            {% endfor %}
+
+                        {% else %}
+                            <p>You haven't set any reminders</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="jumbotron">
+    </div>
+</body>
+</html>
+
+
+
+
+

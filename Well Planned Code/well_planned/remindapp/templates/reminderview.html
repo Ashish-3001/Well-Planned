@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .view-reminder {
+        width: 90%;
+        height: 90vh;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    table {
+        position: relative;
+        width: 50%;
+    }
+
+    h1 {
+        padding: 10px;
+        color: #e57c76;
+        text-transform: uppercase;
+    }
+
+    table tr:nth-child(even) {
+        background: #e5e5e5;
+    }
+</style>
+
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+<div class="view-reminder">
+    <h1>Reminder Details</h1>
+    <table class="table">
+        <tr>
+            <th>ID</th>
+            <th>Message</th>
+            <th>current_date</th>
+            <th>reminder_date</th>
+        </tr>
+        {% for view in reminders %}
+            <tr>
+                <td>
+                    {{ forloop.counter }}
+                </td>
+                <td>
+                    {{ view.message }}
+                </td>
+                <td>
+                    {{ view.current_date }}
+                </td>
+                <td>
+                    {{ view.reminder_date }}
+                </td>
+                <td>
+                    <a href="{% url 'updatereminder' pk=view.id %}" class="btn btn-info btn-block">Update
+                        reminder</a>
+                </td>
+                <td>
+                    <a href="{% url 'deletereminder' pk=view.id %}" class="btn btn-danger btn-block">Delete
+                        reminder</a>
+                </td>
+
+            </tr>
+        {% endfor %}
+    </table>
+</div>
+</div>
+</body>
+</html>

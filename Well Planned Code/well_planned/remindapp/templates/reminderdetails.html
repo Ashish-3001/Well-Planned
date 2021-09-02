@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reminder</title>
+    <link rel="stylesheet" href="{% static 'my_app/Home.css/' %}">
+</head>
+<body>
+
+    <header>
+        <h1 id="title">WELL PLANNED</h1>
+        <h2 id="title1"> Planning is the key </h2>
+    </header>
+    <br><br><br><br><br><br><br>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <div class="card">
+                        <div class="class-header bg-primary text-white">
+                            <h4><span class="fa fa-clock"></span> Reminder</h4>
+                        </div>
+                        <div class="card-body">
+                            <form method="POST">
+                                {% csrf_token %}
+                                {{ form.as_p}}
+                                <input type="submit" value="Save" class="btn btn-secondary btn-block">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br><br>
+    </section>
+    <br><br><br><br><br><br><br><br>
+    <footer class="footer">
+        <section>
+            <h2>About the idea</h2>
+            <p>
+                “WELL PLANNED” is an ultimate tool for planning and self-development, 
+                where you have all the necessary tools required for planning at one place.
+                Open daily morning or evening for 15mins to make his life better, clear and planned.
+                </p>
+        </section>
+        <samp>Done By : Ashish.</samp><br>
+        <samp>help line : 7892288771</samp><br>
+    </footer>
+
+</body>
+</html>

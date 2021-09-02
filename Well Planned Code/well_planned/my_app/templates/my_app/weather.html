@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'my_app/details.css/' %}">
+    <title>Save Password</title>
+</head>
+<body>
+    <header>
+        <h1 id="title">WELL PLANNED</h1>
+        <h2 id="title1"> Planning is the key </h2>
+      </header>
+    <main class="body">
+        <div class="centered">
+            <h1>Weather at Bagalore</h1>
+            <h2>Temperature in kelvin unit: {{ temperature }}</h2>
+            <h2>Humidity (in percentage): {{ humidity }}</h2>
+            <h2>Description: {{ description }}</h2>
+        </div>
+    </main>
+    <footer class="footer">
+        <section>
+            <h2>About the idea</h2>
+            <p>
+                “WELL PLANNED” is an ultimate tool for planning and self-development, 
+                where you have all the necessary tools required for planning at one place.
+                Open daily morning or evening for 15mins to make his life better, clear and planned.
+                </p>
+        </section>
+        <samp>Done By : Ashish.</samp><br>
+        <samp>help line : 7892288771</samp><br>
+    </footer>
+</body>
+</html>

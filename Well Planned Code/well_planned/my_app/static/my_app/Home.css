@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+
+body {
+    margin: 0px;
+    
+}
+
+#title {
+    font-family: 'Anton' , sans-serif !important ;
+    font-size: 45px !important;
+    color: #000;
+    margin-bottom: 0px;
+    margin-top: 5px;
+    margin-left: 20px;
+    display: inline-block;
+}
+
+#title1 {
+    margin-top: 0px;
+    margin-left: 20px;
+
+}
+
+
+header {
+    text-align: center;
+    border-bottom: 4px solid black;
+    margin-top: 0px;
+    background: lightblue;
+    width: 100%;
+}
+
+.footer {
+    text-align: center;
+    border-top: 4px solid black;
+    background: lightblue;
+    width: 100%;
+}
+
+.all {
+    text-align: center;
+    text-decoration: wavy;
+}
+
+.count {
+    color: black;
+    text-align: center;
+}
+
+.donations {
+    border: 2px solid black;
+    margin: 10px;
+    padding: 10px;
+    display: inline-block;
+    max-width: 29%;
+    width: 29%;
+    background: lightcyan;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, .2);
+    transition: box-shadow 500ms, background 3s;
+
+}
+
+.donations:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, .7);
+    background: aqua;
+}
+
+.section_1 {
+    border-bottom: 4px solid blue;
+    padding-top: 40px;
+    height: 150px;
+}
+
+.section_2 {
+    border-bottom: 4px solid blue;
+    padding-top: 7px;
+    padding-bottom: 25px;
+}
+
+.section_3 {
+    padding-top: 7px;
+    padding-bottom: 25px;
+}
+
+.Dairy {
+    display: inline-block;
+    width: 48%;
+    padding-left: 15px;
+    text-decoration: wavy;
+}
+.add_dairy {
+    display: inline-block;
+    width: 48%;
+    text-align: right;
+    text-decoration: wavy;
+    padding-right: 15px;
+}
+
+.to_do_list {
+    display: inline-block;
+    width: 48%;
+    padding-left: 15px;
+    text-decoration: wavy;
+}
+.add_to_do_list {
+    display: inline-block;
+    width: 48%;
+    text-align: right;
+    text-decoration: wavy;
+    padding-right: 15px;
+}

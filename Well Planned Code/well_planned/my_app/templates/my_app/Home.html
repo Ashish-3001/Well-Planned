@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'my_app/Home.css/' %}">
+    <title>Well Planned</title>
+</head>
+<body>
+    <header>
+      <h1 id="title">WELL PLANNED</h1>
+      <h2 id="title1"> Planning is the key </h2>
+    </header>
+    <main>
+        <section class="section_1">
+            <a href="weather/">
+                <article class="donations">
+                    <h2 class="count"> Today's Weather</h2>
+                </article>
+            </a>
+            <a href="wallet/">
+                <article class="donations">
+                    <h2 class="count">Your Wallet (Balance - {{income.balance}})</h2>
+                </article>
+            </a>
+            <a href="reminders/">
+                <article class="donations">
+                    <h2 class="count"> Check Your Reminders</h2>
+                </article>
+            </a>
+        </section>
+        <section class="section_2">
+            <div>
+                <h2 class="Dairy" >Your Dairy's</h2>
+                <h2 class="add_dairy">Add Dairy</h2>
+            </div>
+            {% for count in Dairy_list %}
+                <a href="/dairyList/{{ count.id }}">
+                    <article class="donations">
+                        <h2 class="count">Dairy ({{count.name}})</h2>
+                    </article>
+                </a>
+            {% endfor %}
+        </section>
+        
+        <section class="section_3">
+            <div>
+                <h2 class="to_do_list" >Your To Do List</h2>
+                <h2 class="add_to_do_list">Add To Do List</h2>
+            </div>
+            {% for count in Todo_list %}
+                <a href="/todoList/{{ count.id }}">
+                    <article class="donations">
+                        <h2 class="count">To Do List ({{count.name}})</h2>
+                    </article>
+                </a>
+            {% endfor %}
+        </section>
+        <!-- {% for count in all_application %}
+            <a href="/retrive/{{count.id}}/">
+                <article class="donations">
+                    <h2 class="count"> {{ count.name }} </h2>
+                </article>
+            </a>
+        {% endfor %}-->
+    </main>
+    <footer class="footer">
+        <section>
+            <h2>About the idea</h2>
+            <p>
+                “WELL PLANNED” is an ultimate tool for planning and self-development, 
+                where you have all the necessary tools required for planning at one place.
+                Open daily morning or evening for 15mins to make his life better, clear and planned.
+                </p>
+        </section>
+        <samp>Done By : Ashish.</samp><br>
+        <samp>help line : 7892288771</samp><br>
+    </footer>
+</body>
+</html>
